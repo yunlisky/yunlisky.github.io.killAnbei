@@ -104,14 +104,6 @@ let _gameBBList = [],
 
 function gameInit() {
     createjs.Sound.registerSound({
-        src: "./static/music/err.mp3",
-        id: "err"
-    });
-    createjs.Sound.registerSound({
-        src: "./static/music/end.mp3",
-        id: "end"
-    });
-    createjs.Sound.registerSound({
         src: "./static/music/tap.mp3",
         id: "tap"
     });
@@ -346,8 +338,8 @@ function shareText(score) {
     if (score <= 30) return '使用枪械：手枪';
     if (score <= 60) return '使用枪械：步枪';
     if (score <= 100) return '使用枪械：机枪';
-    if (score <= 150) return '使用枪械：火箭筒';
-    if(score >150)
+    if (score <= 110) return '使用枪械：火箭筒';
+    if(score >110)
     return '你难道用了大伊万？？？';
 }
 
